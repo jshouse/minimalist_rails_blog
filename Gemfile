@@ -11,6 +11,9 @@ gem 'pg', '0.15.1'
 # Use SCSS for stylesheets
 gem 'sass-rails', '4.0.1'
 
+# Use Sass-powered version of Bootstrap for layout
+gem 'bootstrap-sass', '3.1.0'
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '2.1.1'
 
