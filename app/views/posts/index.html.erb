@@ -1,0 +1,23 @@
+<% provide(:title, "Posts") %>
+<h1>Posts List</h1>
+<%= link_to 'New Post', new_post_path, class: "btn btn-primary" %>
+<table class="table">
+	<tr>
+		<th>Title</th>
+		<th>Date Posted</th>
+		<th></th>
+		<th></th>
+		<th></th>
+	</tr>
+	
+	<% @posts.each do |post| %>
+	<tr>
+		<td><%= post.title %></td>
+		<td><%= post.created_at %></td>
+		<td><%= link_to 'Show', post_path(post), class: "btn btn-info" %></td>
+		<td><%= link_to 'Edit', edit_post_path(post), class: "btn btn-warning" %></td>
+		<td><%= link_to 'Destroy', post_path(post),
+                    method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></td>
+	</tr>
+	<% end %>
+</table>

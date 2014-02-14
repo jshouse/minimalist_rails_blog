@@ -1,3 +1,11 @@
 
 /* Override bootstrap variables before the @import directive */
+
 @import "bootstrap";
+
+/* Custom CSS and SCSS */
+
+/* Space between New Post button and Posts List table */
+table {
+	margin-top: $line-height-computed;
+}
