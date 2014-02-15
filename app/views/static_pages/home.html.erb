@@ -1,3 +1,15 @@
 <% provide(:title, 'Home') %>
-<h1>StaticPages#home</h1>
-<p>Find me in app/views/static_pages/home.html.erb</p>
+<div class="row">
+	<div class="col-md-8 col-md-offset-2">
+		<% @posts.each do |post| %>
+		<article>
+			<div class="page-header">
+				<h1><%= link_to post.title, post_path(post) %></h1>
+			</div>
+			<p><small>Posted <%= time_ago_in_words(post.created_at) %> ago.</small></p>
+			<%= post.text.html_safe %>
+		</article>
+		<% end %>
+		<%= will_paginate @posts %>
+	</div>
+</div>

@@ -1,8 +1,12 @@
 <% provide(:title, @post.title) %>
-<article>
-	<div class="page-header">
-		<h1><%= @post.title %></h1>
+<div class="row">
+	<div class="col-md-8 col-md-offset-2">
+		<article>
+			<div class="page-header">
+				<h1><%= @post.title %></h1>
+			</div>
+			<p><small>Posted <%= time_ago_in_words(@post.created_at) %> ago.</small></p>
+			<%= @post.text.html_safe %>
+		</article>
 	</div>
-	<p><small><%= @post.created_at %></small></p>
-	<p><%= @post.text %></p>
-</article>
+</div>

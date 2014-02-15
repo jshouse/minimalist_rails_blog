@@ -14,6 +14,10 @@ gem 'sass-rails', '4.0.1'
 # Use Sass-powered version of Bootstrap for layout
 gem 'bootstrap-sass', '3.1.0'
 
+# Pagination
+gem 'will_paginate', '3.0.4'
+gem 'bootstrap-will_paginate', '0.0.10'
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '2.1.1'
 
