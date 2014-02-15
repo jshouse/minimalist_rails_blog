@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  before_action :signed_in_user, except: [:show]
   
   def new
     @post = Post.new
@@ -46,6 +47,10 @@ class PostsController < ApplicationController
   private
     def post_params
       params.require(:post).permit(:title, :text)
+    end
+    
+    def signed_in_user
+      redirect_to signin_url, notice: "Please sign in." unless signed_in?
     end
   
 end
