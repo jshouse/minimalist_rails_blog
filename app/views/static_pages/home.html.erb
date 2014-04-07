@@ -7,7 +7,7 @@
 				<h1><%= link_to post.title, post_path(post) %></h1>
 			</div>
 			<p><small>Posted <%= time_ago_in_words(post.created_at) %> ago.</small></p>
-			<%= post.text.html_safe %>
+			<%= dat_markdown(post.text) %>
 		</article>
 		<% end %>
 		<%= will_paginate @posts %>

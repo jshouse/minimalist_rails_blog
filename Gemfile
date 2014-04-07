@@ -48,6 +48,9 @@ end
 # Use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '3.1.2'
 
+# Use Redcarpet for markdown
+gem 'redcarpet', '3.1.1'
+
 # Use unicorn as the app server
 # gem 'unicorn'
 
